@@ -1,5 +1,5 @@
     # Docker may require root permission to run some steps hence sudo:required is added
-    sudo: required
+sudo: required
 
     # Defining docker service for Travis CI
 services:
@@ -13,7 +13,7 @@ before_install:
 script:
     - docker run -e CI=true aadarshp31/myreactapp npm run test
 
-    # Phase 3: Stuff you wanna do for deploment
+    # Phase 3: Stuff we wanna do for deploment
 deploy:
     provider: elasticbeanstalk
     access_key_id: $ACCESS_KEY_ID
