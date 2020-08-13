@@ -1,6 +1,3 @@
-# Docker may require root permission to run some steps hence sudo:required is added
-sudo: required
-
 # Defining docker service for Travis CI
 services:
   - docker
@@ -18,7 +15,7 @@ deploy:
   region: "ap-south-1"
   app: "reactapp-docker-aws-integration"
   env: "ReactappDockerAwsIntegration-env"
-  bucket_name: "elasticbeanstalk-ap-south-1-533962485714"
+  bucket: "elasticbeanstalk-ap-south-1-533962485714"
   bucket_path: "reactapp-docker-aws-integration"
   on:
     branch: master
